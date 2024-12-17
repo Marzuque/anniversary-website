@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finale - To My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <text y='55%' x='20%' font-size='50'>❤️</text>
+    </svg>" type="image/svg+xml">
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Parkinsans', sans-serif;
+            background-image: url('images/sc3.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Container */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Clickable Heart */
+        #heart {
+            font-size: 3rem;
+            color: red;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        #heart:hover {
+            transform: scale(1.3);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Glowing Message (Initially Hidden) */
+        .grand-message {
+            display: none;
+            margin-top: 30px;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fbb034, 0 0 20px #fbb034;
+            text-align: center;
+        }
+        
+        /* Fade-in animation for the glowing text */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInGlow 2s forwards; /* Fade-in animation for 2 seconds */
+        }
+        
+        .fade-in.delay {
+            animation-delay: 2s; /* Second line appears after a delay */
+        }
+        
+        @keyframes fadeInGlow {
+            0% {
+                opacity: 0;
+                transform: translateY(20px); /* Slight upward motion */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Instruction Text */
+        .click-instruction {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Buttons */
+        .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* Hidden Sections */
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            background: rgba(219, 196, 229, 0.8); /* Dark purplish semi-transparent */
+            color: #f5e9ff; /* Light purple-white text */
+            padding: 20px;
+            border: 2px solid #a855f7; /* Light purple border for emphasis */
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+            text-align: left; /* Align text neatly */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Where we end for now</h1>
+        <p>Thank you for joining me on this year-long journey, my love.</p>
+
+        <!-- Buttons for Additional Sections -->
+        <button class="btn" onclick="toggleContent('credits')">Credits</button>
+        <div id="credits" class="hidden">
+            <div class = "fade-in">This took way longer than I initially thought to make and I ended up taking almost 2 weeks to make it. I don't have all the photos on my phone so I had to go digging in the messenger shared content to find images but there too I didn't find everything and nothing there had any dates. Even still I wish I had more time to work on it, to give it some more polish but I feel that this is a somewhat fitting ending. I may not always be your perfect Mithil, but I'll always try my best to give you the partner you deserve.</div>    
+        </div>
+
+        <button class="btn" onclick="toggleContent('meaning')">What You Mean to Me</button>
+        <div id="meaning" class="hidden">
+            <div class = "fade-in">I don't even know where to begin Mithil. From the first day we confessed, I knew that we would be built to last (Inshallah). I saw my forever in you, my love. Through everything, the ups and downs, the pickups to your job, the shared meals, the steamy times, the slow mornings, the visiting lakes, and everything in between. You're the only one I want to share those experiences with. Forever.</div>
+        </div>
+
+        <!-- Clickable Heart -->
+        <div id="heart" onclick="revealGlowingText()">❤️</div>
+        <div class="click-instruction">(Click the heart!)</div>
+
+        <!-- Glowing Message (Initially Hidden) -->
+        <!-- Glowing Message (Initially Hidden) -->
+<div id="grand-message" class="grand-message">
+    <div class="fade-in">My Flower, My Sun, My Rock, My Partner.</div>
+    <div class="fade-in delay">Thanks for being mine.</div>
+    <div class="fade-in delay" style="animation-delay: 4s;">I love you</div>
+</div>
+
+
+        
+    </div>
+
+    <script>
+        // Function to Reveal the Glowing Text
+        function revealGlowingText() {
+            const glowingText = document.getElementById('grand-message');
+            glowingText.style.display = 'block'; // Show glowing text
+            document.getElementById('heart').style.display = 'none'; // Hide the heart
+            document.querySelector('.click-instruction').style.display = 'none'; // Hide instruction
+        }
+
+        // Function to Toggle Hidden Sections
+        function toggleContent(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

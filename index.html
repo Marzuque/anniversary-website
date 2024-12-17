@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <text y='55%' x='20%' font-size='50'>❤️</text>
+    </svg>" type="image/svg+xml">
+</head>
+<body style="background-image: url('images/a2.jpg');">
+    <header>
+        <h1>Welcome to Our Anniversary Page Mithil!</h1>
+    </header>
+    <main>
+        <section id="welcome-text">
+            <p>This site is dedicated to the best 12 months of my life, spent with my most favorite person in the world.</p>
+            <p>I love you so much and I hope you enjoy!</p>
+            <button class="action-button" onclick="revealBouquet()">Reveal Bouquet</button>
+            <div id="flower-bouquet" style="display: none;">
+                <img src="images/flower-bouquet.gif" alt="Flower Bouquet">
+            </div>
+        </section>
+        <section id="background-graphics">
+            <!-- Background graphics can be added here -->
+        </section>
+        <section id="welcome-content">
+            <div id="loading-bar-container">
+                <div id="loading-bar"></div>
+                <span id="loading-text">Loading Memories...</span>
+                <div id="loading-heart">❤️</div>
+            </div>
+            <button onclick="startLoading('anniversary.html')">Memory Lane...</button>
+            <img src="images/flower1.gif" class="corner-flower top-left" alt="Flower GIF">
+            <img src="images/flower2.gif" class="corner-flower top-right" alt="Flower GIF">
+            <img src="images/flower3.gif" class="corner-flower bottom-left" alt="Flower GIF">
+            <img src="images/flower4.gif" class="corner-flower bottom-right" alt="Flower GIF">
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
